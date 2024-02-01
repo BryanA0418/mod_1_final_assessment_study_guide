@@ -1,99 +1,144 @@
 // Write a function that takes a number as an argument and returns 'even' or 'odd'.
-
-// console.log(evenOrOdd(5)); // Output: 'odd'
-// console.log(evenOrOdd(4)); // Output: 'even'
+function evenOrOdd(num){
+ if(num%2===0){
+    return "Even"
+ }else return "False"   
+}
+ //console.log(evenOrOdd(5)); // Output: 'odd'
+ //console.log(evenOrOdd(4)); // Output: 'even'
 
 // ------------------------------------------------------------
 
 // Create a function that checks if the length of a given string is greater than a specified number. Return true or false.
+function isStringLengthGreaterThan(str,num){
+return str.length>num? true : false
+}
+ //console.log(isStringLengthGreaterThan("Hello, World!", 5)); // Output: true
 
-// console.log(isStringLengthGreaterThan("Hello, World!", 5)); // Output: true
-
-// console.log(isStringLengthGreaterThan("Hello", 5)); // Output: false
+ //console.log(isStringLengthGreaterThan("Hello", 5)); // Output: false
 
 // ------------------------------------------------------------
 
 // Implement a function that concatenates two strings and returns the result.
-
-// console.log(concatenateStrings("Hello", "World")); // Output: 'HelloWorld'
+function concatenateStrings(str,str1){
+    return str + str1
+}
+ //console.log(concatenateStrings("Hello", "World")); // Output: 'HelloWorld'
 
 // ------------------------------------------------------------
 
 // Write a function using interpolation to generate a string that includes the value of a given variable.
+function interpolateVariable(str,age){
+return `${str} ${age}`
+}
+ //console.log(interpolateVariable("My age is: ", 25)); // Output: 'My age is: 25'
 
-// console.log(interpolateVariable("My age is: ", 25)); // Output: 'My age is: 25'
-
-// console.log(interpolateVariable("My age is: ", 30)); // Output: 'My age is: 25'
+ //console.log(interpolateVariable("My age is: ", 30)); // Output: 'My age is: 30'
 
 // ------------------------------------------------------------
 
 // Develop a function that calculates the sum of numbers in a given range.
-
-// console.log(sumRange(1, 5)); // Output: 15
-// console.log(sumRange(1, 6)); // Output: 21
+function sumRange(a,b){
+let sum = 0 
+for(let i = a;i<=b;i++){
+    sum+= i
+ }
+ return sum
+}
+ //console.log(sumRange(1, 5)); // Output: 15
+ //console.log(sumRange(1, 6)); // Output: 21
 
 // ------------------------------------------------------------
 
 // Create a function that sums up all odd numbers in a given range using a loop.
-
-// console.log(sumOddNumbersInRange(1, 10)); // Output: 25
-// console.log(sumOddNumbersInRange(1, 11)); // Output: 36
+function sumOddNumbersInRange(a,b){
+let sum = 0;
+for(let i = a;i<=b;i++){
+    i%2===1 ? sum+=i:null
+    }
+    return sum
+}
+ //console.log(sumOddNumbersInRange(1, 10)); // Output: 25
+ //console.log(sumOddNumbersInRange(1, 11)); // Output: 36
 
 // ------------------------------------------------------------
 
 // Implement a function that returns the first element of an array.
-
-// console.log(getFirstElement([1, 2, 3])); // Output: 1
-// console.log(getFirstElement([2, 3])); // Output: 2
+function getFirstElement(arr){
+    return arr[0]
+}
+//console.log(getFirstElement([2, 3])); // Output: 2
+//console.log(getFirstElement([1, 2, 3])); // Output: 1
 
 // ------------------------------------------------------------
 
 // Write a function to get the last element of an array.
-
-// console.log(getLastElement([1, 2, 3])); // Output: 3
-// console.log(getLastElement([1, 2, 3, 4])); // Output: 4
+function getLastElement(arr){
+return arr[arr.length-1]
+}
+ //console.log(getLastElement([1, 2, 3])); // Output: 3
+ //console.log(getLastElement([1, 2, 3, 4])); // Output: 4
 
 // ------------------------------------------------------------
 
 // Build a function to replace an element at a specific index in an array and returns the altered array.
-
-// console.log(replaceElementAtIndex([1, 2, 3], 1, 5)); // Output: [1, 5, 3]
-// console.log(replaceElementAtIndex([1, 2, 3], 2, 6)); // Output: [1, 5, 6]
+function replaceElementAtIndex(arr,index,num){
+arr[index]=num;
+return arr;
+}
+ //console.log(replaceElementAtIndex([1, 2, 3], 1, 5)); // Output: [1, 5, 3]
+ //console.log(replaceElementAtIndex([1, 2, 3], 2, 6)); // Output: [1, 5, 6]
 
 // ------------------------------------------------------------
 
 // Develop a function that removes an element from the beginning of an array.
-
-// console.log(removeFirstElement([1, 2, 3])); // Output: [2, 3]
-// console.log(removeFirstElement([0, 1, 2, 3])); // Output: [1, 2, 3]
+function removeFirstElement(arr){
+arr.shift()
+return arr
+}
+ //console.log(removeFirstElement([1, 2, 3])); // Output: [2, 3]
+ //console.log(removeFirstElement([0, 1, 2, 3])); // Output: [1, 2, 3]
 
 // ------------------------------------------------------------
 
 // Create a function to remove an element from the end of an array and return the removed element.
-
-// console.log(removeLastElement([1, 2, 3])); // Output: 3
-// console.log(removeLastElement([1, 2, 3, 4])); // Output: 4
+function removeLastElement(arr){
+return arr.pop()
+}
+ //console.log(removeLastElement([1, 2, 3])); // Output: 3
+ //console.log(removeLastElement([1, 2, 3, 4])); // Output: 4
 
 // ------------------------------------------------------------
 
 // Implement a function to remove an element at a given index in an array and returns the input array.
-
-// console.log(removeElementAtIndex([1, 2, 3], 1)); // Output: [1, 3]
-// console.log(removeElementAtIndex([1, 2, 3], 2)); // Output: [1, 2]
+function removeElementAtIndex(arr,index){
+arr.splice(index,1)
+return arr
+}
+console.log(removeElementAtIndex([1, 2, 3], 1)); // Output: [1, 3]
+console.log(removeElementAtIndex([1, 2, 3], 2)); // Output: [1, 2]
 
 // ------------------------------------------------------------
 
 // Write a function that converts all characters in a string to uppercase.
-
-// console.log(toUpperCaseString("hello")); // Output: 'HELLO'
-// console.log(toUpperCaseString("world")); // Output: 'WORLD'
+function toUpperCaseString(string){
+return string.toUpperCase()
+}
+ //console.log(toUpperCaseString("hello")); // Output: 'HELLO'
+ //console.log(toUpperCaseString("world")); // Output: 'WORLD'
 
 // ------------------------------------------------------------
 
 // Create a function to properly capitalize each word in a string of words.
-
-// console.log(capitalizeWords("hello world")); // Output: 'Hello World'
-// console.log(capitalizeWords("whats up joe?")); // Output: 'Whats Up Joe?'
+function capitalizeWords(string){
+let string1 = string.split(" ")
+for(let i = 0;i<string1.length;i++){
+string1[i].charAt(0).toUpperCase()
+    }
+    return string1
+}
+ console.log(capitalizeWords("hello world")); // Output: 'Hello World'
+ console.log(capitalizeWords("whats up joe?")); // Output: 'Whats Up Joe?'
 
 // ------------------------------------------------------------
 
