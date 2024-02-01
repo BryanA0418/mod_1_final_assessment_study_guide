@@ -115,8 +115,8 @@ function removeElementAtIndex(arr,index){
 arr.splice(index,1)
 return arr
 }
-console.log(removeElementAtIndex([1, 2, 3], 1)); // Output: [1, 3]
-console.log(removeElementAtIndex([1, 2, 3], 2)); // Output: [1, 2]
+//console.log(removeElementAtIndex([1, 2, 3], 1)); // Output: [1, 3]
+//console.log(removeElementAtIndex([1, 2, 3], 2)); // Output: [1, 2]
 
 // ------------------------------------------------------------
 
@@ -131,34 +131,50 @@ return string.toUpperCase()
 
 // Create a function to properly capitalize each word in a string of words.
 function capitalizeWords(string){
+let word;
+let strArr =  []
 let string1 = string.split(" ")
 for(let i = 0;i<string1.length;i++){
-string1[i].charAt(0).toUpperCase()
+    word = string1[i].charAt(0).toUpperCase() + string1[i].slice(1)
+    strArr.push(word)
     }
-    return string1
+    return strArr.join(' ')
 }
- console.log(capitalizeWords("hello world")); // Output: 'Hello World'
- console.log(capitalizeWords("whats up joe?")); // Output: 'Whats Up Joe?'
+ //console.log(capitalizeWords("hello world")); // Output: 'Hello World'
+ //console.log(capitalizeWords("whats up joe?")); // Output: 'Whats Up Joe?'
 
 // ------------------------------------------------------------
 
 // Develop a function that returns the element at the middle index of an array.
+function getMidIndexElement(arr){
+let index = arr.length/2
+return arr[Math.floor(index)]
+}
+ //console.log(getMidIndexElement([1, 2, 3, 4, 5])); // Output: 3
 
-// console.log(getMidIndexElement([1, 2, 3, 4, 5])); // Output: 3
-
-// console.log(getMidIndexElement([1, 2, 3, 4, 5, 6, 7])); // Output: 4
+ //console.log(getMidIndexElement([1, 2, 3, 4, 5, 6, 7])); // Output: 4
 
 // ------------------------------------------------------------
 
 // Implement a function to calculate the sum of all numbers in an array.
-
-// console.log(sumArray([1, 2, 3, 4])); // Output: 10
-// console.log(sumArray([1, 2, 3, 4, 5])); // Output: 15
+function sumArray(arr){
+let sum = 0
+    for(let i=0;i<arr.length;i++){
+     sum  += arr[i]
+    }
+    return sum
+}
+ //console.log(sumArray([1, 2, 3, 4])); // Output: 10
+ //console.log(sumArray([1, 2, 3, 4, 5])); // Output: 15
 
 // ------------------------------------------------------------
 
 // Create a function that returns the sum of all odd or even numbers in an array.
-
+function  sumOddNumbersArray(arr){
+for(let i = 0;i < arr.length;i++){
+    
+}
+}
 // console.log(sumOddNumbersArray([1, 2, 3, 4])); // Output: 4
 // console.log(sumOddNumbersArray([1, 2, 3, 4, 5])); // Output: 9
 
