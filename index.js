@@ -171,19 +171,31 @@ let sum = 0
 
 // Create a function that returns the sum of all odd or even numbers in an array.
 function  sumOddNumbersArray(arr){
+let sum = 0
 for(let i = 0;i < arr.length;i++){
-    
+if(arr[i]%2===1){
+sum += arr[i]
+        }
+    }
+    return sum;
 }
-}
-// console.log(sumOddNumbersArray([1, 2, 3, 4])); // Output: 4
-// console.log(sumOddNumbersArray([1, 2, 3, 4, 5])); // Output: 9
+ //console.log(sumOddNumbersArray([1, 2, 3, 4])); // Output: 4
+ //console.log(sumOddNumbersArray([1, 2, 3, 4, 5])); // Output: 9
 
 // ------------------------------------------------------------
 
 // Write a function to find the maximum number in an array using a loop and the accumulator pattern.
-
-// console.log(findMaxUsingLoop([1, 5, 3, 8, 2])); // Output: 8
-// console.log(findMaxUsingLoop([1, 5, 3, 2])); // Output: 5
+function findMaxUsingLoop(arr){
+let greatestNum = 0
+for(let i = 0;i<arr.length;i++){
+    if(arr[i]>greatestNum){
+        greatestNum=arr[i]
+        }
+    }
+    return greatestNum
+}
+ //console.log(findMaxUsingLoop([1, 5, 3, 8, 2])); // Output: 8
+ //console.log(findMaxUsingLoop([1, 5, 3, 2])); // Output: 5
 
 // ------------------------------------------------------------
 
